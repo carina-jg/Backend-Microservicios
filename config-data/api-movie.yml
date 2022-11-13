@@ -32,6 +32,6 @@ management:
 
 info:
   app:
-    name: Movies
-    version: 1.0.0
+    name: movie-service
     description: Movies
+    version: 1.0.0

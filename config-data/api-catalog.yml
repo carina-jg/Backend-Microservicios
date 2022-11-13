@@ -23,6 +23,6 @@ management:
 
 info:
   app:
-    name: Catalog
-    version: 1.0.0
+    name: catalog-service
     description: Movies catalog
+    version: 1.0.0
