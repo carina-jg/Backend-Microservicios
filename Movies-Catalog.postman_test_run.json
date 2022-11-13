@@ -1,0 +1,150 @@
+{
+	"id": "4cdf0475-5e5f-4f4a-b1f2-e54dad4f7aac",
+	"name": "Movies-Catalog",
+	"timestamp": "2022-11-13T22:54:11.631Z",
+	"collection_id": "18052401-6721d6d5-e0a8-497a-a29c-9953f2b14385",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5d9f297f-8e94-4ff3-9e6b-f8665273acf5",
+			"name": "Guardar pelicula - Accion",
+			"url": "http://localhost:8080/api/v1/movies/save",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				151
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9aa01d2f-c5a4-4ad7-8a6d-bb10dd968dff",
+			"name": "Guardar pelicula - Terror",
+			"url": "http://localhost:8080/api/v1/movies/save",
+			"time": 33,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1fb2ed45-5ffa-4b7a-89e8-9ad6de58e4e9",
+			"name": "Consultar peliculas por genero Accion - Catalog",
+			"url": "http://localhost:8080/api/v1/catalog/accion",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				34
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0e7637ea-cae5-49ba-992e-62a3d0b1dbfc",
+			"name": "Consultar peliculas por genero Terror - Catalog",
+			"url": "http://localhost:8080/api/v1/catalog/terror",
+			"time": 43,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				43
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0fc87d5b-555a-486d-9e9d-8f9d141353c7",
+			"name": "Consultar peliculas por genero Accion - Movies",
+			"url": "http://localhost:8080/api/v1/movies/accion",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4ef3fcad-24b6-4d4c-accd-e599c37e7dd3",
+			"name": "Consultar peliculas por genero Terror - Movies",
+			"url": "http://localhost:8080/api/v1/movies/terror",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 309,
+	"collection": {
+		"requests": [
+			{
+				"id": "5d9f297f-8e94-4ff3-9e6b-f8665273acf5",
+				"method": "POST"
+			},
+			{
+				"id": "9aa01d2f-c5a4-4ad7-8a6d-bb10dd968dff",
+				"method": "POST"
+			},
+			{
+				"id": "1fb2ed45-5ffa-4b7a-89e8-9ad6de58e4e9",
+				"method": "GET"
+			},
+			{
+				"id": "0e7637ea-cae5-49ba-992e-62a3d0b1dbfc",
+				"method": "GET"
+			},
+			{
+				"id": "0fc87d5b-555a-486d-9e9d-8f9d141353c7",
+				"method": "GET"
+			},
+			{
+				"id": "4ef3fcad-24b6-4d4c-accd-e599c37e7dd3",
+				"method": "GET"
+			}
+		]
+	}
+}

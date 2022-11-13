@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "6721d6d5-e0a8-497a-a29c-9953f2b14385",
+		"name": "Movies-Catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18052401"
+	},
+	"item": [
+		{
+			"name": "Guardar pelicula - Accion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pelicula 9\",\r\n    \"genre\": \"Acción\",\r\n    \"urlStream\": \"www.netflix.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar pelicula - Terror",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pelicula 10\",\r\n    \"genre\": \"Terror\",\r\n    \"urlStream\": \"www.netflix.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar peliculas por genero Accion - Catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalog/accion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalog",
+						"accion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar peliculas por genero Terror - Catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalog/terror",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalog",
+						"terror"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar peliculas por genero Accion - Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/accion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"accion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar peliculas por genero Terror - Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movies/terror",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"terror"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
