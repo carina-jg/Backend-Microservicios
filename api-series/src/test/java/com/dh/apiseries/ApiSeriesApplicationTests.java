@@ -1,13 +1,13 @@
-package com.dh.catalog;
+package com.dh.apiseries;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiCatalogApplicationTests {
+class ApiSeriesApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
