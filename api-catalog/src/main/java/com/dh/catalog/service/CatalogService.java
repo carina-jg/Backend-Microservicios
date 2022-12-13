@@ -50,7 +50,7 @@ public class CatalogService {
         return movieServiceClient.getMovieByGenre(genre);
     }
 
-    public List<?> findMovieFallBack(CallNotPermittedException ex, String genre) {
+    public List<?> findMovieFallBack(String genre, Throwable t) {
         return findMovieByGenre(genre);
     }
 
@@ -60,7 +60,7 @@ public class CatalogService {
         return serieServiceClient.getSerieByGenre(genre);
     }
 
-    public List<?> findSerieFallBack(CallNotPermittedException ex, String genre) {
+    public List<?> findSerieFallBack(String genre, Throwable t) {
         return findSerieByGenre(genre);
     }
 
