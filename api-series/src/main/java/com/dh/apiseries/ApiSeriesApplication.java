@@ -47,10 +47,10 @@ public class ApiSeriesApplication {
 			seasons.add(seasonTwo);
 			seasons.add(seasonThree);
 
-			Serie serieOne = new Serie("SERIE_001", "Season 1", "drama", seasons);
-			Serie serieTwo = new Serie("SERIE_002", "Season 2", "drama", seasons);
-			Serie serieThree = new Serie("SERIE_003", "Season 3", "comedia", seasons);
-			Serie serieFor = new Serie("SERIE_004", "Season 4", "comedia", seasons);
+			Serie serieOne = new Serie("SERIE_001", "Serie 1", "Infantil", seasons);
+			Serie serieTwo = new Serie("SERIE_002", "Serie 2", "Drama", seasons);
+			Serie serieThree = new Serie("SERIE_003", "Serie 3", "Comedia", seasons);
+			Serie serieFor = new Serie("SERIE_004", "Serie 4", "Comedia", seasons);
 
 			repository.save(serieOne);
 			repository.save(serieTwo);
