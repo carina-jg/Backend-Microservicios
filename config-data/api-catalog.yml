@@ -14,8 +14,8 @@ spring:
     enabled: true
   data:
     mongodb:
-      username: usr-catalog-mongo
-      password: pwd-catalog-mongo
+#      username: usr-catalog-mongo
+#      password: pwd-catalog-mongo
       database: catalog-dev-mongo
       port: 27018
       host: localhost

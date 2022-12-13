@@ -14,8 +14,8 @@ spring:
     enabled: true
   data:
     mongodb:
-      username: usr-series-mongo
-      password: pwd-series-mongo
+#      username: usr-series-mongo
+#      password: pwd-series-mongo
       database: series-dev-mongo
       port: 27017
       host: localhost
