@@ -3,18 +3,20 @@ package com.dh.movie.service;
 import com.dh.movie.event.NewMovieEventProducer;
 import com.dh.movie.model.Movie;
 import com.dh.movie.repository.MovieRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 public class MovieService {
 
     private final MovieRepository movieRepository;
     private final NewMovieEventProducer newMovieEventProducer;
 
-    final static Logger log = Logger.getLogger(MovieService.class);
+    //final static Logger log = Logger.getLogger(MovieService.class);
 
     public MovieService(MovieRepository movieRepository, NewMovieEventProducer newMovieEventProducer) {
         this.movieRepository = movieRepository;
@@ -28,9 +30,9 @@ public class MovieService {
 
     public Movie save(Movie movie) {
         log.info("Guardando la película " + movie.getName());
-        movieRepository.save(movie);
-        newMovieEventProducer.execute(movie);
-        return movie;
+        Movie savedMovie = movieRepository.save(movie);
+        newMovieEventProducer.execute(savedMovie);
+        return savedMovie;
     }
 
     public List<Movie> getAll() {

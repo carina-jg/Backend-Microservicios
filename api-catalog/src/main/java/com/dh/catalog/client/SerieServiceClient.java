@@ -22,7 +22,7 @@ public interface SerieServiceClient {
     @Setter
     @AllArgsConstructor
     class SerieDto{
-        private String serieID;
+        private String serieId;
         private String name;
         private String genre;
         private List<SeasonDto> seasons;
@@ -31,7 +31,7 @@ public interface SerieServiceClient {
     @Setter
     @AllArgsConstructor
     class SeasonDto{
-        private String seasonID;
+        private String seasonId;
         private Integer seasonNumber;
         private List<ChapterDto> chapters;
     }
@@ -40,7 +40,7 @@ public interface SerieServiceClient {
     @Setter
     @AllArgsConstructor
     class ChapterDto{
-        private String chapterID;
+        private String chapterId;
         private String name;
         private Integer chapterNumber;
         private String urlStream;
