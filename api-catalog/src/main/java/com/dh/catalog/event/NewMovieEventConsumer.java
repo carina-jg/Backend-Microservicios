@@ -11,6 +11,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Component
@@ -34,14 +35,21 @@ public class NewMovieEventConsumer {
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
+
     public static class Data implements Serializable {
-        private MovieDto movie = new MovieDto();
+
+        @Serial
+        private static final long serialVersionUID = 1L;
+        private MovieDTO movie = new MovieDTO();
 
         @Getter
         @Setter
         @NoArgsConstructor
         @AllArgsConstructor
-        public static class MovieDto {
+        public static class MovieDTO implements Serializable{
+
+            @Serial
+            private static final long serialVersionUID = 1L;
             private String movieId;
             private String name;
             private String genre;

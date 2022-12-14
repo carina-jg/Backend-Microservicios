@@ -2,7 +2,6 @@ package com.dh.movie.event;
 
 import com.dh.movie.config.RabbitMQConfig;
 import com.dh.movie.model.Movie;
-import com.dh.movie.model.dto.MovieDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,13 +23,6 @@ public class NewMovieEventProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void execute(Movie movie) {
-        MovieDTO movieDTO = new MovieDTO();
-        BeanUtils.copyProperties(movie, movieDTO);
-        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.TOPIC_NEW_MOVIE, movieDTO);
-    }
-
-/*
     public void execute(Movie newMovie){
         NewMovieEventProducer.Data data = new NewMovieEventProducer.Data();
         BeanUtils.copyProperties(newMovie, data.getMovie());
@@ -46,7 +38,7 @@ public class NewMovieEventProducer {
 
         @Serial
         private static final long serialVersionUID = 1L;
-        private Data.MovieDTO movie = new Data.MovieDTO();
+        private MovieDTO movie = new MovieDTO();
 
         @Getter
         @Setter
@@ -56,12 +48,10 @@ public class NewMovieEventProducer {
 
             @Serial
             private static final long serialVersionUID = 1L;
-            private Long movieId;
+            private String movieId;
             private String name;
             private String genre;
             private String urlStream;
         }
     }
-
- */
 }
