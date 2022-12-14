@@ -4,7 +4,6 @@ import com.dh.movie.event.NewMovieEventProducer;
 import com.dh.movie.model.Movie;
 import com.dh.movie.repository.MovieRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

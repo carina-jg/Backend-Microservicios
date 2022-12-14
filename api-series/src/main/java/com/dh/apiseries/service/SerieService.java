@@ -4,7 +4,6 @@ import com.dh.apiseries.event.NewSerieEventProducer;
 import com.dh.apiseries.model.Serie;
 import com.dh.apiseries.repository.SerieRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
