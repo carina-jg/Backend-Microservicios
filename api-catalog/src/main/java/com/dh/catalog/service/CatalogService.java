@@ -6,7 +6,6 @@ import com.dh.catalog.model.Movie;
 import com.dh.catalog.model.Serie;
 import com.dh.catalog.repository.MovieRepository;
 import com.dh.catalog.repository.SerieRepository;
-import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import org.springframework.stereotype.Service;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;

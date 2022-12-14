@@ -25,16 +25,16 @@ class MovieSerieTest extends BaseAPI {
         given().
                 contentType(ContentType.JSON).
                 body(
-                        new MovieRequest(160L, "Nombre", "Genero", "www.url.com")
+                        new MovieRequest("M001", "Nombre", "Comedia", "www.url.com")
                 ).
-                when().post("/api/v1/movies");
+                when().post("/api/v1/movies/save");
 
         given().
                 contentType(ContentType.JSON).
                 body(
-                        new SerieRequest("S150", "NombreSerie", "Ficción")
+                        new SerieRequest("S150", "NombreSerie", "Comedia")
                 ).
-                when().post("/api/v1/series");
+                when().post("/api/v1/series/save");
 
         Movie responseOnlineMovie = given()
                 .pathParam("movies", "genre")
@@ -71,7 +71,7 @@ class MovieSerieTest extends BaseAPI {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class MovieRequest {
-        private Long id;
+        private String id;
         private String name;
         private String genre;
         private String urlStream;
