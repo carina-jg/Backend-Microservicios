@@ -38,11 +38,12 @@ public class CatalogService {
     }
 
     // Online
-    // Aplico Circuit Breaker y Retry para que en el caso de que los servicios no respondan
-    // cuando se hace una consulta online, se vuelva a probar algunas veces más, y en el caso
-    // de que siga sin funcionar, tome un método alternativo (en este caso, devuelve los
-    // mismos datos que se tienen guardados para la consulta offline, para devolverle una respuesta
-    // amigable al usuario).
+    /* Aplico Circuit Breaker y Retry para que en el caso de que los servicios no respondan
+    cuando se hace una consulta online, se vuelva a probar algunas veces más, y en el caso
+    de que siga sin funcionar, tome un método alternativo (en este caso, devuelve los
+    mismos datos que se tienen guardados para la consulta offline, para devolverle una respuesta
+    amigable al usuario).
+     */
     @CircuitBreaker(name = "clientMovie", fallbackMethod = "findMovieFallBack")
     @Retry(name = "retryMovie")
     public List<?> getMoviesByGenre(String genre) {
